@@ -1,5 +1,6 @@
 package neumont;
 
-public class Game {
+public class Game
+{
 
 }
