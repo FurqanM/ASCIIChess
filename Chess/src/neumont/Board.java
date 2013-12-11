@@ -1,5 +1,7 @@
 package neumont;
 
-public class Board {
-
+public class Board 
+{
+	// Board will be a 2D array of object Piece
+	
 }
