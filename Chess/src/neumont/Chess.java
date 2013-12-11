@@ -13,8 +13,10 @@ public class Chess
 		// draw board with pieces potential moves
 		// input for move
 		
-		// if statements if piece is on top of other piece delete piece that got taken and replace with moved piece
-		// if spot is empty change empty space to chess piece and change spot of original spot to null
+		// if statements if piece is on top of other piece delete piece that got
+		//taken and replace with moved piece
+		// if spot is empty change empty space to chess piece and change
+		//spot of original spot to null
 		// check for check on every move
 		// also check for checkmate / win
 		
