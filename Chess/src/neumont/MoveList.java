@@ -1,5 +1,6 @@
 package neumont;
 
-public class MoveList {
+public class MoveList
+{
 
 }

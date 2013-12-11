@@ -1,5 +1,6 @@
 package neumont;
 
-public class Position {
+public class Position
+{
 
 }
