@@ -2,11 +2,12 @@ package neumont;
 
 public class Board 
 {
-	private Piece boardSetup[][] = new Piece[8][8];
+	private Piece boardSetup[][];
 	
 	
 	public Board()
 	{
+		this.boardSetup = new Piece[8][8];
 		boardSetup[0][0] = new Piece(PieceType.WROOK);
 		boardSetup[0][1] = new Piece(PieceType.WKNIGHT);
 		boardSetup[0][2] = new Piece(PieceType.WBISHOP);
@@ -51,34 +52,42 @@ public class Board
 			{
 				if(boardSetup[y][x].getType() == PieceType.WPAWN)
 					boardSetup[y][x].setPicture("WPN");
-				if(boardSetup[y][x].getType() == PieceType.WROOK)
+				else if(boardSetup[y][x].getType() == PieceType.WROOK)
 					boardSetup[y][x].setPicture("WRK");
-				if(boardSetup[y][x].getType() == PieceType.WBISHOP)
+				else if(boardSetup[y][x].getType() == PieceType.WBISHOP)
 					boardSetup[y][x].setPicture("WBP");
-				if(boardSetup[y][x].getType() == PieceType.WKNIGHT)
+				else if(boardSetup[y][x].getType() == PieceType.WKNIGHT)
 					boardSetup[y][x].setPicture("WKT");
-				if(boardSetup[y][x].getType() == PieceType.WQUEEN)
+				else if(boardSetup[y][x].getType() == PieceType.WQUEEN)
 					boardSetup[y][x].setPicture("WQN");
-				if(boardSetup[y][x].getType() == PieceType.WKING)
+				else if(boardSetup[y][x].getType() == PieceType.WKING)
 					boardSetup[y][x].setPicture("WKG");
-				if(boardSetup[y][x].getType() == PieceType.BPAWN)
+				else if(boardSetup[y][x].getType() == PieceType.BPAWN)
 					boardSetup[y][x].setPicture("BPN");
-				if(boardSetup[y][x].getType() == PieceType.BROOK)
+				else if(boardSetup[y][x].getType() == PieceType.BROOK)
 					boardSetup[y][x].setPicture("BRK");
-				if(boardSetup[y][x].getType() == PieceType.BBISHOP)
+				else if(boardSetup[y][x].getType() == PieceType.BBISHOP)
 					boardSetup[y][x].setPicture("BBP");
-				if(boardSetup[y][x].getType() == PieceType.BKNIGHT)
+				else if(boardSetup[y][x].getType() == PieceType.BKNIGHT)
 					boardSetup[y][x].setPicture("BKT");
-				if(boardSetup[y][x].getType() == PieceType.BQUEEN)
+				else if(boardSetup[y][x].getType() == PieceType.BQUEEN)
 					boardSetup[y][x].setPicture("BQN");
-				if(boardSetup[y][x].getType() == PieceType.BKING)
+				else if(boardSetup[y][x].getType() == PieceType.BKING)
 					boardSetup[y][x].setPicture("BKG");
-				if(boardSetup[y][x].getType() == PieceType.NOPIECE)
+				else 
 					boardSetup[y][x].setPicture(" ");
 			}
 	}
 	
+	// allows piece to move on the board
+	public void movePiece(String boardPosition, String newPosition)
+	{
+		// change boardPosition to NOPIECE and newPosition to the piece type
+		// will have to convert a position like A1 into an x-y coordinate
+		// probably with a split string, and will convert a letter to a number
+	}
 	
+	// this method draws the chess board with all the pieces.
 	public void draw()
 	{
 		System.out.println("---------------------------------");
@@ -93,8 +102,11 @@ public class Board
 		}
 	}
 	
-	
-	// method to draw board with pieces alotted moves
+	// this method is to draw the board with the pieces alloted moves.
+	public void draw(Piece piece)
+	{
+		
+	}
 	
 	
 	
