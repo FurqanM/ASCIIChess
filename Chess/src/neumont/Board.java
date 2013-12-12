@@ -2,8 +2,6 @@ package neumont;
 
 public class Board 
 {
-	private int currentX = 0;
-	private int currentY = 0;
 	private Piece boardSetup[][] = new Piece[8][8];
 	
 	
@@ -26,6 +24,10 @@ public class Board
 		boardSetup[1][6] = new Piece(PieceType.WPAWN);
 		boardSetup[1][7] = new Piece(PieceType.WPAWN);
 		
+		for(int y = 2; y <= 5 ; y++)
+			for(int x = 0; x < 8; x++)
+				boardSetup[y][x] = new Piece(PieceType.NOPIECE);
+		
 		
 		boardSetup[7][0] = new Piece(PieceType.BROOK);
 		boardSetup[7][1] = new Piece(PieceType.BKNIGHT);
@@ -46,7 +48,14 @@ public class Board
 	}
 	
 	
-	// method to draw board looping through array
+	public void draw()
+	{
+		for(int y = 0; y < 8; y++)
+			for(int x = 0; x < 8; x++)
+				System.out.println(boardSetup[y][x].getType());
+		
+		//System.out.print
+	}
 	
 	
 	// method to draw board with pieces alotted moves

@@ -7,6 +7,8 @@ public class Chess
 	{
 		Board board = new Board();
 		
+		board.draw();
+		
 		// start loop for game
 		// draw board
 		// input for piece selected

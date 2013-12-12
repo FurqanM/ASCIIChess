@@ -4,7 +4,8 @@ public enum PieceType
 {
 	
 	BPAWN, BBISHOP, BROOK, BKNIGHT, BQUEEN, BKING,
-	WPAWN, WBISHOP, WROOK, WKNIGHT, WQUEEN, WKING;
+	WPAWN, WBISHOP, WROOK, WKNIGHT, WQUEEN, WKING,
+	NOPIECE;
 	
 	// String piece type -- pawn, knight, rook, bishop, king, queen
 	// String : ascii chararcter for the piece
