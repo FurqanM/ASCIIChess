@@ -45,16 +45,52 @@ public class Board
 		boardSetup[6][5] = new Piece(PieceType.BPAWN);
 		boardSetup[6][6] = new Piece(PieceType.BPAWN);
 		boardSetup[6][7] = new Piece(PieceType.BPAWN);
+		
+		for(int y = 0; y < 8; y++)
+			for(int x = 0; x < 8; x++)
+			{
+				if(boardSetup[y][x].getType() == PieceType.WPAWN)
+					boardSetup[y][x].setPicture("WPN");
+				if(boardSetup[y][x].getType() == PieceType.WROOK)
+					boardSetup[y][x].setPicture("WRK");
+				if(boardSetup[y][x].getType() == PieceType.WBISHOP)
+					boardSetup[y][x].setPicture("WBP");
+				if(boardSetup[y][x].getType() == PieceType.WKNIGHT)
+					boardSetup[y][x].setPicture("WKT");
+				if(boardSetup[y][x].getType() == PieceType.WQUEEN)
+					boardSetup[y][x].setPicture("WQN");
+				if(boardSetup[y][x].getType() == PieceType.WKING)
+					boardSetup[y][x].setPicture("WKG");
+				if(boardSetup[y][x].getType() == PieceType.BPAWN)
+					boardSetup[y][x].setPicture("BPN");
+				if(boardSetup[y][x].getType() == PieceType.BROOK)
+					boardSetup[y][x].setPicture("BRK");
+				if(boardSetup[y][x].getType() == PieceType.BBISHOP)
+					boardSetup[y][x].setPicture("BBP");
+				if(boardSetup[y][x].getType() == PieceType.BKNIGHT)
+					boardSetup[y][x].setPicture("BKT");
+				if(boardSetup[y][x].getType() == PieceType.BQUEEN)
+					boardSetup[y][x].setPicture("BQN");
+				if(boardSetup[y][x].getType() == PieceType.BKING)
+					boardSetup[y][x].setPicture("BKG");
+				if(boardSetup[y][x].getType() == PieceType.NOPIECE)
+					boardSetup[y][x].setPicture(" ");
+			}
 	}
 	
 	
 	public void draw()
 	{
+		System.out.println("---------------------------------");
 		for(int y = 0; y < 8; y++)
+		{
 			for(int x = 0; x < 8; x++)
-				System.out.println(boardSetup[y][x].getType());
-		
-		//System.out.print
+			{
+				System.out.printf("%3s|",boardSetup[y][x].getPicture());
+			}
+			System.out.println();
+			System.out.println("---+---+---+---+---+---+---+---+");
+		}
 	}
 	
 	

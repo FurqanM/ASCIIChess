@@ -2,8 +2,8 @@ package neumont;
 
 public class Piece
 {
-	String picture;
-	PieceType type;
+	private String picture;
+	private PieceType type;
 	
 	public Piece(PieceType type)
 	{
