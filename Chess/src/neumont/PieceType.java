@@ -8,11 +8,15 @@ public enum PieceType
 	NOPIECE;
 	
 	
-	public void Move()
+	public void movePath()
 	{
 		//Moves pieces
 		if(this.equals(BPAWN))
 		{
+			if(Board[x][y].hasPiece(NOPIECE))
+					{
+						PieceType.BPAWN[][].
+					}
 			//move y - 1
 			//or ((x - 1) && (y - 1)) || ((x + 1) && (y - 1))
 			//move one space down

@@ -80,7 +80,12 @@ public class Board
 	// allows piece to move on the board
 	public void movePiece(String boardPosition, String newPosition)
 	{
-		
+		string.split(boardPosition)
+		string.split(newpostion)
+		board[boardPosition1][boardPostion2]
+				if board.haspiece == true
+					board[newposition1][newposition2 = original piece type]
+						old piece = nopiece
 		// change boardPosition to NOPIECE and newPosition to the piece type
 		// will have to convert a position like A1 into an x-y coordinate
 		// probably with a split string, and will convert a letter to a number
@@ -115,7 +120,7 @@ public class Board
 	// this method is to draw the board with the pieces alloted moves.
 	public void draw(Piece piece)
 	{
-
+		boardSetup[x][y+1].setType = boardSetup[x][y].getType();
 	}
 
 }
