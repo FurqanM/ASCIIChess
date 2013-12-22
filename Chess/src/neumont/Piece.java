@@ -28,5 +28,14 @@ public class Piece
 	public void setType(PieceType type)
 	{
 		this.type = type;
+		if(type == PieceType.NOPIECE)
+		{
+			this.picture = " ";
+		}
+	}
+	public void setPiece(Piece piece)
+	{
+		this.type = piece.type;
+		this.picture = piece.picture;
 	}
 }

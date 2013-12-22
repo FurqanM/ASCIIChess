@@ -80,15 +80,80 @@ public class Board
 	// allows piece to move on the board
 	public void movePiece(String boardPosition, String newPosition)
 	{
-		string.split(boardPosition)
-		string.split(newpostion)
-		board[boardPosition1][boardPostion2]
-				if board.haspiece == true
-					board[newposition1][newposition2 = original piece type]
-						old piece = nopiece
-		// change boardPosition to NOPIECE and newPosition to the piece type
-		// will have to convert a position like A1 into an x-y coordinate
-		// probably with a split string, and will convert a letter to a number
+		
+		// with letterSideInitial and letterSideNew the input should be something like (a7) 
+		// so splitting it into the letter and into the number, then converting them all to
+		// int to be able to manipulate the position on the 2d array
+		
+		String letterSideInitial = boardPosition.substring(0, 1).trim();
+		String letterSideNew = newPosition.substring(0, 1).trim();
+		int initialX = 0;
+		int initialY = Integer.parseInt(boardPosition.substring(1).trim());
+		int newX = 0;
+		int newY = Integer.parseInt(newPosition.substring(1).trim());
+		
+		switch(letterSideInitial)
+		{
+			case "a":
+				initialX = 0;
+				break;
+			case "b":
+				initialX = 1;
+				break;
+			case "c":
+				initialX = 2;
+				break;
+			case "d":
+				initialX = 3;
+				break;
+			case "e":
+				initialX = 4;
+				break;
+			case "f":
+				initialX = 5;
+				break;
+			case "g":
+				initialX = 6;
+				break;
+			case "h":
+				initialX = 7;
+				break;
+		}
+		
+		switch(letterSideNew)
+		{
+			case "a":
+				newX = 0;
+				break;
+			case "b":
+				newX = 1;
+				break;
+			case "c":
+				newX = 2;
+				break;
+			case "d":
+				newX = 3;
+				break;
+			case "e":
+				newX = 4;
+				break;
+			case "f":
+				newX = 5;
+				break;
+			case "g":
+				newX = 6;
+				break;
+			case "h":
+				newX = 7;
+				break;
+		}
+		
+		// these 2 lines actually change the position to move to to the old piece
+		// and the original position with a NOPIECE
+		
+				this.boardSetup[newY][newX].setPiece(this.boardSetup[initialY][initialX]);
+				this.boardSetup[initialY][initialX].setType(PieceType.NOPIECE);
+				
 		
 		//test and modulate the castling and isolation
 		//of the checkmate and check application between methods
@@ -105,22 +170,24 @@ public class Board
 
 	public void draw()
 	{
-		System.out.println("---------------------------------");
+		System.out.println("  +---+---+---+---+---+---+---+---+");
 		for (int y = 0; y < 8; y++)
 		{
+			System.out.print(y + " |");
 			for (int x = 0; x < 8; x++)
 			{
 				System.out.printf("%3s|", boardSetup[y][x].getPicture());
 			}
 			System.out.println();
-			System.out.println("---+---+---+---+---+---+---+---+");
+			System.out.println("  +---+---+---+---+---+---+---+---+");
 		}
+		System.out.println("  + A + B + C + D + E + F + G + H +");
 	}
 
 	// this method is to draw the board with the pieces alloted moves.
 	public void draw(Piece piece)
 	{
-		boardSetup[x][y+1].setType = boardSetup[x][y].getType();
+		//boardSetup[x][y+1].setType = boardSetup[x][y].getType();
 	}
 
 }

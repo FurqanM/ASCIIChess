@@ -1,11 +1,29 @@
 package neumont;
 
+import java.util.Scanner;
+
 public class Chess
 {
 
 	public static void main(String[] args)
 	{
+		Scanner input = new Scanner(System.in);
 		Board board = new Board();
+		Piece piece = new Piece(PieceType.NOPIECE);
+		String boardPosition;
+		String newPosition;
+		
+		board.draw();
+		
+		System.out.println("Choose the piece you'd like to move example: (A7)");
+		
+		boardPosition = input.nextLine();
+		
+		System.out.println("Choose where to go: (A7)");
+		
+		newPosition = input.nextLine();
+		
+		board.movePiece(boardPosition, newPosition);
 		
 		board.draw();
 		

@@ -13,9 +13,9 @@ public enum PieceType
 		//Moves pieces
 		if(this.equals(BPAWN))
 		{
-			if(Board[x][y].hasPiece(NOPIECE))
+		//	if(Board[x][y].hasPiece(NOPIECE))
 					{
-						PieceType.BPAWN[][].
+		//				PieceType.BPAWN[][].
 					}
 			//move y - 1
 			//or ((x - 1) && (y - 1)) || ((x + 1) && (y - 1))
